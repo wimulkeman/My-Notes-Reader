@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+#    Options -MultiViews
+
+    # Fetch web assets
+    RewriteRule ^css/(.*)$ css/$1 [NC,L]
+    RewriteRule ^js/(.*)$ js/$1 [NC,L]
+    RewriteRule ^img/(.*)$ img/$1 [NC,L]
+
+    # Fetch requests for reading notes
+    RewriteCond %{REQUEST_URI} /read/.* [NC]
+    RewriteRule ^read/(.*) read.php?url=$1 [L]
+
+    # Fetch requests for the index page
+    RewriteRule ^$ index.php [L]
+
+    ErrorDocument 404 /404.html
+</IfModule>
