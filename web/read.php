@@ -33,6 +33,7 @@ echo <<<html
             <title>{$documentTitle} | My Notes</title>
             <link rel="stylesheet" type="text/css" href="/css/highlight/default.min.css">
             <link rel="stylesheet" type="text/css" href="/css/highlight/darcula.css">
+            <link rel="stylesheet" type="text/css" href="/css/layout.css">
         </head>
         <body>
             <a href="/" title="Back to index">Back to index</a>
